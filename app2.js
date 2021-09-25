@@ -52,16 +52,30 @@ function convertToCelcius(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = 19;
 }
+//for weather conditions
+function showTemp(response) {
+  console.log(response);
+  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#temp").innerHTML = Math.round(response.data.main.temp);
+}
+
+
 
 //search form must include axios search
 
 function search(event) {
   event.preventDefault();
   let apiKey = "888e4fcf51eb407327068f47d5808891";
-  let city = `Paris`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  // let cityInput = document.querySelector("#city-input")
+  // let city = cityInput.value
+  //the two lines above can be replaced by the line below
+  let city = document.querySelector("#city-input").value;
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   console.log(apiUrl);
-  //axios.get(apiUrl).then(showTemp);
+  //to check if axios is working you can console.log it
+  console.log(axios);
+  axios.get(apiUrl).then(showTemp);
 }
 
 let searchForm = document.querySelector("#search-form");
