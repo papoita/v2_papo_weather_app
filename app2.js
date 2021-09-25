@@ -1,3 +1,6 @@
+let apiKey = "888e4fcf51eb407327068f47d5808891";
+let units = "metric";
+
 //date
 function formatDate(date) {
   let hours = date.getHours();
@@ -66,9 +69,9 @@ function showTemp(response) {
 
 
 function search(city) {
-  let apiKey = "888e4fcf51eb407327068f47d5808891";
 
-  let units = "metric";
+
+
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   console.log(apiUrl);
   //to check if axios is working you can console.log it
@@ -80,6 +83,7 @@ function search(city) {
 //search form must include axios search
 
 function handleSubmit(event) {
+  //debugger;
   event.preventDefault();
   // let cityInput = document.querySelector("#city-input")
   // let city = cityInput.value
@@ -88,6 +92,30 @@ function handleSubmit(event) {
   search(city);
 
 }
+function showPosition(position) {
+
+  let lon = position.coords.longitude;
+  let lat = position.coords.latitude;
+  console.log(lat);
+  console.log(lon);
+  //challenge 2 - show current weather
+  //let apiKey = "apiKey";
+  //replace apiKey with secret personal key before loading
+  //https://home.openweathermap.org/api_keys
+  let units = "metric";
+
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}`;
+
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
+}
+
+
+function showLocation(event) {
+  event.preventDefault();
+  console.log("current location function!");
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
@@ -97,5 +125,8 @@ searchForm.addEventListener("submit", handleSubmit);
 
 //let celciusLink = document.querySelector("#celcius-link");
 //celciusLink.addEventListener("click", convertToCelcius);
+let button = document.querySelector("#current-location-button");
+button.addEventListener("click", showLocation);
 
 search("Ottawa");
+
