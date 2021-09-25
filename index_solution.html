@@ -1,0 +1,90 @@
+<!-- @format -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+			crossorigin="anonymous"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montaga&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/91cc94fb16.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<title>paposweather_app2</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="app" id="weather-box">
+				<div class="row name">
+					<h1>Papo's WEATHER APP</h1>
+				</div>
+				<form class="search-form" id="search-form">
+					<div class="row">
+						<div class="col-2">
+							<button
+								class="btn btn-primary w-100"
+								id="current-location-button"
+							>
+								<i class="fas fa-map-pin"></i>
+							</button>
+						</div>
+						<div class="col-7">
+							<input
+								type="search"
+								class="form-control shadow-sm"
+								id="city-input"
+								placeholder="Enter a City"
+								autofocus="on"
+								autocomplete="off"
+							/>
+						</div>
+						<div class="col-3">
+							<input
+								type="submit"
+								class="btn btn-warning w-100"
+								id="search"
+								value="GO"
+							/>
+						</div>
+					</div>
+				</form>
+				<h2 class="hard-text text-center city" id="city">Ottawa</h2>
+				<h3 class="hard-text date" id="date">Date</h3>
+
+				<div class="row">
+					<div class="col-6">
+						<h3 class="hard-text conditions" id="conditions"></h3>
+						<h3 class="hard-text humidity">
+							Humidity: <span id="humidity"> </span> %
+						</h3>
+						<h3 class="hard-text wind">Wind: <span id="wind"> 3</span> km/h</h3>
+						<h3 class="hard-text wind">
+							Feels like: <span id="feels"> </span>°C
+						</h3>
+					</div>
+					<div class="col-6">
+						<h4 class="hard-text temp">
+							<strong id="temp"></strong>
+							<small id="celcius">°C</small>
+						</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="app2.js"></script>
+	</body>
+</html>
