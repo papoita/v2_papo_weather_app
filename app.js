@@ -1,5 +1,4 @@
-let apiKey = "888e4fcf51eb407327068f47d5808891";
-let units = "metric";
+
 
 //date
 function formatDate(date) {
@@ -69,9 +68,8 @@ function showTemp(response) {
 
 
 function search(city) {
-
-
-
+  let apiKey = "888e4fcf51eb407327068f47d5808891";
+  let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   console.log(apiUrl);
   //to check if axios is working you can console.log it
@@ -103,6 +101,7 @@ function showPosition(position) {
   //replace apiKey with secret personal key before loading
   //https://home.openweathermap.org/api_keys
   let units = "metric";
+  let apiKey = "888e4fcf51eb407327068f47d5808891";
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}`;
 
