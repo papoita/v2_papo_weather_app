@@ -50,6 +50,7 @@ dateElement.innerHTML = formatDate(currentTime);
 
 //Works for button click current location
 function showTemp(response) {
+  response.preventDefault();
   let temperature = Math.round(response.data.main.temp);
   console.log(temperature);
   let tempHeading = document.querySelector("#temp-input");
@@ -74,6 +75,7 @@ function showTemp(response) {
 }
 //show position based on current location lat and lon
 function showPosition(position) {
+  position.preventDefault();
   let lon = position.coords.longitude;
   let lat = position.coords.latitude;
   console.log(lat);
@@ -115,5 +117,7 @@ function cityInput(event) {
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
 }
 
-let cityForm = document.querySelector("#city-form");
+let = document.querySelector("#city-form");
 cityForm.addEventListener("submit", cityInput);
+
+//the reason why this search doesn't work on enter is because of the document.querySelector is not the top event of search form. plus the new conditions inside the function cityInput where there are many city and new variable calls
