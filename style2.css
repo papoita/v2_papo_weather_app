@@ -1,0 +1,72 @@
+/** @format */
+
+#weather-box {
+	border: 2px solid gray;
+	padding: 15px;
+	margin: 20px auto;
+	max-width: 1000px;
+	border-radius: 20px;
+}
+body {
+	background-size: cover;
+	width: auto;
+	height: auto;
+	font-family: "Montaga";
+}
+#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	opacity: 0.7;
+}
+
+.name {
+	font-size: 40px;
+	background-color: transparent;
+	text-align: center;
+	display: block;
+	color: rgba(128, 128, 128);
+	padding: 20px;
+}
+.city {
+	font-size: 40px;
+	opacity: 0.9;
+	color: rgb(62, 59, 59);
+	font-weight: 400;
+	margin-top: 20px;
+}
+
+.date {
+	font-size: 20px;
+	margin: 10px 0;
+	color: black;
+}
+
+.conditions {
+	font-size: 20px;
+	margin: 0px;
+	color: grey;
+}
+.wind {
+	font-size: 20px;
+	margin: 0px;
+	color: grey;
+}
+.humidity {
+	font-size: 20px;
+	margin: 0px;
+	color: grey;
+}
+h4 {
+	font-size: 20px;
+}
+.temp {
+	line-height: 80px;
+	font-size: 90px;
+}
+#celcius {
+	font-size: 30px;
+}
+/** @format */
