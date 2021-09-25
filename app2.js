@@ -57,19 +57,17 @@ function showTemp(response) {
   console.log(response);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#feels").innerHTML = Math.round(response.data.main.feels_like);
+  document.querySelector("#conditions").innerHTML = response.data.weather[0].description;
+
 }
 
 
-
-//search form must include axios search
-
-function search(event) {
-  event.preventDefault();
+function search(city) {
   let apiKey = "888e4fcf51eb407327068f47d5808891";
-  // let cityInput = document.querySelector("#city-input")
-  // let city = cityInput.value
-  //the two lines above can be replaced by the line below
-  let city = document.querySelector("#city-input").value;
+
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   console.log(apiUrl);
@@ -78,12 +76,26 @@ function search(event) {
   axios.get(apiUrl).then(showTemp);
 }
 
+
+//search form must include axios search
+
+function handleSubmit(event) {
+  event.preventDefault();
+  // let cityInput = document.querySelector("#city-input")
+  // let city = cityInput.value
+  //the two lines above can be replaced by the line below
+  let city = document.querySelector("#city-input").value;
+  search(city);
+
+}
+
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
+searchForm.addEventListener("submit", handleSubmit);
 
-let fahrenheitLink = document.querySelector("#fahreheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
+//let fahrenheitLink = document.querySelector("#fahreheit-link");
+//fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", convertToCelcius);
+//let celciusLink = document.querySelector("#celcius-link");
+//celciusLink.addEventListener("click", convertToCelcius);
 
+search("Ottawa");
