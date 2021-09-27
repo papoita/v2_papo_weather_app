@@ -16,4 +16,5 @@
 solution of weather app
 https://codesandbox.io/s/focused-merkle-2rolz?file=/index.html
 
-I am testing this change to see if the time stamp of git commit will update correctly
+I am testing this change to see if the time stamp of git commit will update correctly:
+yes it did work. apparently when doing git add git push git origin master from the terminal runing on a virtual machine the time stamp is of the virtual machine? seems to be in another date.
