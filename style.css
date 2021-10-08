@@ -1,7 +1,5 @@
 /** @format */
 
-
-
 body {
 	background-size: cover;
 	width: auto;
@@ -14,15 +12,13 @@ body {
 	bottom: 0px;
 	min-width: 100%;
 	min-height: 100%;
-	
 }
 #weather-box {
-	border: 2px solid gray;
+	border: 1px solid gray;
 	padding: 15px;
 	margin: 20px auto;
-	max-width: 1000px;
-	border-radius: 20px;
-	
+	max-width: 800px;
+	border-radius: 10px;
 }
 
 .name {
