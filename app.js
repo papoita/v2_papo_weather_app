@@ -41,7 +41,7 @@ function formatDate(date) {
   let dates = currentTime.getDate();
 
   console.log(hours, minutes);
-  return `${hours}:${minutes} <br/> ${day} <br> ${month}, ${dates}`;
+  return ` ${day} ${hours}:${minutes} <br/> ${month}, ${dates}`;
 }
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
