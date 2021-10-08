@@ -6,19 +6,9 @@ body {
 	height: auto;
 	font-family: "Montaga";
 }
-#myVideo {
-	position: fixed;
-	right: 0;
-	bottom: 0px;
-	min-width: 100%;
-	min-height: 100%;
-}
-#weather-box {
-	border: 1px solid gray;
-	padding: 15px;
-	margin: 20px auto;
-	max-width: 800px;
-	border-radius: 10px;
+h2 {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
 }
 
 .name {
@@ -38,34 +28,51 @@ body {
 }
 
 .date {
-	font-size: 20px;
-	margin: 10px 0;
+	font-size: 15px;
+	margin: 0px 0px 10px 0px;
 	color: black;
 }
 
 .conditions {
-	font-size: 20px;
+	font-size: 10px;
 	margin: 0px;
 	color: grey;
 }
 .wind {
-	font-size: 20px;
+	font-size: 10px;
 	margin: 0px;
 	color: grey;
 }
 .humidity {
-	font-size: 20px;
+	font-size: 10px;
 	margin: 0px;
 	color: grey;
 }
-h4 {
-	font-size: 20px;
-}
+
 .temp {
-	line-height: 80px;
-	font-size: 90px;
+	line-height: 50px;
+	font-size: 40px;
 }
 #celcius {
-	font-size: 30px;
+	font-size: 20px;
+}
+
+#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0px;
+	min-width: 100%;
+	min-height: 100%;
+}
+.weather-app-wrapper {
+	margin: 20px auto;
+	max-width: 800px;
+}
+
+.weather-app {
+	border: 1px solid gray;
+	padding: 15px;
+
+	border-radius: 10px;
 }
 /** @format */
