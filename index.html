@@ -28,65 +28,69 @@
 
 	<body>
 		<div class="container">
-			<div class="app" id="weather-box">
-				<div class="row name">
-					<h1>Papo's WEATHER APP</h1>
-				</div>
-				<form class="search-form" id="search-form">
-					<div class="row">
-						<div class="col-7">
-							<input
-								type="search"
-								class="form-control shadow-sm"
-								id="city-input"
-								placeholder="Enter a City"
-								autofocus="on"
-								autocomplete="off"
-							/>
-						</div>
-						<div class="col-3">
-							<input
-								type="submit"
-								class="btn btn-warning w-100"
-								id="search"
-								value="GO"
-							/>
-						</div>
-						<div class="col-2">
-							<button
-								class="btn btn-primary w-100"
-								id="current-location-button"
-							>
-								<i class="fas fa-map-pin"></i>
-							</button>
-						</div>
+			<div class="weather-app-wrapper">
+				<div class="weather-app">
+					<div class="row name">
+						<h1>Papo's WEATHER APP</h1>
 					</div>
-				</form>
-				<h2 class="hard-text text-center city" id="city">Ottawa</h2>
-				<h3 class="hard-text text-center date" id="date">Date</h3>
+					<form class="search-form" id="search-form">
+						<div class="row">
+							<div class="col-7">
+								<input
+									type="search"
+									class="form-control shadow-sm"
+									id="city-input"
+									placeholder="Enter a City"
+									autofocus="on"
+									autocomplete="off"
+								/>
+							</div>
+							<div class="col-3">
+								<input
+									type="submit"
+									class="btn btn-warning w-100"
+									id="search"
+									value="GO"
+								/>
+							</div>
+							<div class="col-2">
+								<button
+									class="btn btn-primary w-100"
+									id="current-location-button"
+								>
+									<i class="fas fa-map-pin"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<h2 class="hard-text text-center city" id="city">Ottawa</h2>
+					<h3 class="hard-text text-center date" id="date">Date</h3>
 
-				<div class="row">
-					<div class="col-4">
-						<h4 class="hard-text text-center temp">
-							<strong id="temp"></strong>
-							<small id="celcius">°C</small>
-						</h4>
-					</div>
-					<div class="col-4 text-center">
-						<img
-							src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
-							alt="partly cloudy"
-						/>
-					</div>
-					<div class="col-4">
-						<h3 class="hard-text conditions" id="conditions"></h3>
-						<h3 class="hard-text humidity">
-							Humidity: <span id="humidity"> </span> %
-						</h3>
-						<h3 class="hard-text wind">Wind: <span id="wind"> 3</span> km/h</h3>
-						<h3 class="hard-text wind">
-							Feels like: <span id="feels"> </span>°C
-						</h3>
+					<div class="row">
+						<div class="col-4">
+							<h4 class="hard-text text-center temp">
+								<strong id="temp"></strong>
+								<small id="celcius">°C</small>
+							</h4>
+						</div>
+						<div class="col-4 text-center">
+							<img
+								src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+								alt="partly cloudy"
+							/>
+						</div>
+						<div class="col-4">
+							<h3 class="hard-text conditions" id="conditions"></h3>
+							<h3 class="hard-text humidity">
+								Humidity: <span id="humidity"> </span> %
+							</h3>
+							<h3 class="hard-text wind">
+								Wind: <span id="wind"> 3</span> km/h
+							</h3>
+							<h3 class="hard-text wind">
+								Feels like: <span id="feels"> </span>°C
+							</h3>
+						</div>
 					</div>
 				</div>
 				<small>
