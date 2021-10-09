@@ -1,48 +1,6 @@
 
 /*
-//date for current time 
-function formatDate(date) {
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
 
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  //let year = date.getFullYear();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[date.getDay()]; //0 and 6
-
-  let months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  let month = months[currentTime.getMonth()];
-  let dates = currentTime.getDate();
-
-  console.log(hours, minutes);
-  return ` ${day} ${hours}:${minutes} <br/> ${month}, ${dates}`;
-}
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 
@@ -76,7 +34,24 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[date.getMonth()];
+  let dates = date.getDate();
+  return `${day} ${hours}:${minutes} <br/> ${dates} ${month}`;
 }
 
 
