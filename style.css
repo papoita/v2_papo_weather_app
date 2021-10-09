@@ -45,6 +45,7 @@ h2 {
 	font-size: 10px;
 	margin: 0px;
 	color: grey;
+	text-transform: capitalize;
 }
 .wind {
 	font-size: 10px;
