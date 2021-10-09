@@ -57,7 +57,7 @@ function formatDate(timestamp) {
 
 //for weather conditions
 function showTemp(response) {
-  console.log(response);
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
@@ -65,7 +65,7 @@ function showTemp(response) {
   document.querySelector("#feels").innerHTML = Math.round(response.data.main.feels_like);
   document.querySelector("#conditions").innerHTML = response.data.weather[0].description;
   document.querySelector("#date").innerHTML = formatDate(response.data.dt * 1000);
-  console.log(response.data);
+
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
