@@ -54,6 +54,20 @@ function convertToCelcius(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = 19;
 }
+
+
+// The time stamp given in the current weather api from which we get the time stamp is given in miliseconds since 1970 so what we have to do is :
+
+function formatDate(timestamp) {
+  //calculate the date
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let day = date.getDay();
+  return `${day} ${hours}:${minutes}`;
+}
+
+
 //for weather conditions
 function showTemp(response) {
   console.log(response);
@@ -63,6 +77,7 @@ function showTemp(response) {
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#feels").innerHTML = Math.round(response.data.main.feels_like);
   document.querySelector("#conditions").innerHTML = response.data.weather[0].description;
+  document.querySelector("#date").innerHTML = formatDate(response.data.dt * 1000);
 
 }
 
