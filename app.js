@@ -92,8 +92,8 @@ function handleSubmit(event) {
   // let cityInput = document.querySelector("#city-input")
   // let city = cityInput.value
   //the two lines above can be replaced by the line below
-  let city = document.querySelector("#city-input").value;
-  search(city);
+  let city = document.querySelector("#city-input");
+  search(city.value);
 
 }
 function showPosition(position) {
