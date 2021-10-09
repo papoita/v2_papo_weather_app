@@ -68,7 +68,7 @@ function showTemp(response) {
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  //iconElement.setAttribute("alt", response.data.weather[0].description);
 
 }
 
@@ -89,9 +89,7 @@ function search(city) {
 function handleSubmit(event) {
   //debugger;
   event.preventDefault();
-  // let cityInput = document.querySelector("#city-input")
-  // let city = cityInput.value
-  //the two lines above can be replaced by the line below
+
   let city = document.querySelector("#city-input");
   search(city.value);
 
