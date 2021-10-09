@@ -1,6 +1,6 @@
 
-
-//date
+/*
+//date for current time 
 function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
@@ -47,7 +47,7 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 
 dateElement.innerHTML = formatDate(currentTime);
-
+*/
 //to celcius
 function convertToCelcius(event) {
   event.preventDefault();
