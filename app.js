@@ -59,11 +59,23 @@ function convertToCelcius(event) {
 // The time stamp given in the current weather api from which we get the time stamp is given in miliseconds since 1970 so what we have to do is :
 
 function formatDate(timestamp) {
-  //calculate the date
   let date = new Date(timestamp);
   let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
   let minutes = date.getMinutes();
-  let day = date.getDay();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = ["Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",];
+  let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
 
