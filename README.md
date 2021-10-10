@@ -1,5 +1,20 @@
 # v2_papos_weather_app
  functional weather and location data searches
+ 
+ #solution homework week 7, Oct 11 deadline
+ netlify deplyment:
+ https://optimistic-almeida-d25fd4.netlify.app/
+ 
+ 
+ complete weather app
+ requirements:
+ search engine, 
+ API integration, 
+ unit conversion, 
+ wind speed, 
+ weather description, 
+ and weather icon are mandatory. 
+ The project should not include the forecast yet
 
  # Project step by step:
 1. Set up project
