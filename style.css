@@ -74,10 +74,20 @@ h3:first-letter {
 	line-height: 1;
 	font-weight: 400;
 }
-.weather-temperature units {
+.weather-temperature .units {
 	position: relative;
 	font-size: 16px;
 	top: -34px;
+	text-decoration: none;
+}
+
+.weather-temperature .active {
+	color: black;
+	cursor: default;
+	text-decoration: none;
+}
+.weather-temperature .active:hover {
+	text-decoration: none;
 }
 
 #myVideo {
