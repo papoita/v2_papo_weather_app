@@ -55,7 +55,8 @@ function formatDate(timestamp) {
 function showTemp(response) {
 
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temp").innerHTML = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+  document.querySelector("#temp").innerHTML = Math.round(celsiusTemperature);
   document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#feels").innerHTML = Math.round(response.data.main.feels_like);
@@ -65,6 +66,7 @@ function showTemp(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
 
 }
 
@@ -116,8 +118,6 @@ function showLocation(event) {
 }
 
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
 
 //let fahrenheitLink = document.querySelector("#fahreheit-link");
 //fahrenheitLink.addEventListener("click", convertToFahrenheit);
@@ -127,14 +127,23 @@ searchForm.addEventListener("submit", handleSubmit);
 let button = document.querySelector("#current-location-button");
 button.addEventListener("click", showLocation);
 
-search("Ottawa");
+
 
 function showFahrenheitTemperature(event) {
   event.preventDefault();
-  alert("clicked");
-  //let temperatureElement = document.querySelector("#temperature");
-  //temperatureElement.innerHTML = 19;
+  //alert("clicked");
+  let temperatureElement = document.querySelector("#temp");
+  let fahrenheitTemperature = (celsiusTemperature * 9 / 5) + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
+
+let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
+
+search("Ottawa");
