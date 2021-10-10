@@ -33,34 +33,32 @@ h2 {
 
 .date {
 	font-size: 13px;
-	margin: 0px 0px 10px 0px;
+	
 	color: black;
 }
 
-.icon {
-	padding: 0px;
-}
+
 h3:first-letter {
 	text-transform: capitalize;
 }
 .conditions {
-	font-size: 10px;
+	font-size: 13px;
 	margin: 0px;
 	color: grey;
 }
 .wind {
-	font-size: 10px;
+	font-size: 13px;
 	margin: 0px;
 	color: grey;
 }
 .humidity {
-	font-size: 10px;
+	font-size: 13px;
 	margin: 0px;
 	color: grey;
 }
 
 .temp {
-	line-height: 1;
+	
 	font-size: 60px;
 }
 #celcius {
