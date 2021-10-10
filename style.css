@@ -33,13 +33,18 @@ h2 {
 
 .date {
 	font-size: 13px;
-	
+
 	color: black;
 }
 
-
 h3:first-letter {
 	text-transform: capitalize;
+}
+
+.aditionals-wrapper {
+	font-size: 13px;
+	margin-top: 15px;
+	color: grey;
 }
 .conditions {
 	font-size: 13px;
@@ -57,12 +62,22 @@ h3:first-letter {
 	color: grey;
 }
 
-.temp {
-	
-	font-size: 60px;
+.weather-temperature img {
+	margin-left: 15px;
+	margin-top: 15px;
+	height: 64px;
+	width: 64px;
 }
-#celcius {
-	font-size: 13px;
+.weather-temperature strong {
+	color: rgb(33, 33, 33);
+	font-size: 64px;
+	line-height: 1;
+	font-weight: 400;
+}
+.weather-temperature units {
+	position: relative;
+	font-size: 16px;
+	top: -34px;
 }
 
 #myVideo {
