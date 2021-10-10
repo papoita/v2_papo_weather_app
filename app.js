@@ -7,11 +7,7 @@ let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 */
 //to celcius
-function convertToCelcius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
-}
+
 
 
 // The time stamp given in the current weather api from which we get the time stamp is given in miliseconds since 1970 so what we have to do is :
@@ -133,3 +129,12 @@ button.addEventListener("click", showLocation);
 
 search("Ottawa");
 
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  alert("clicked");
+  //let temperatureElement = document.querySelector("#temperature");
+  //temperatureElement.innerHTML = 19;
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
