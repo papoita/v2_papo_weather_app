@@ -69,6 +69,7 @@ function displayForecast() {
       </div>
     </div>
   </div> `;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 //for weather conditions
