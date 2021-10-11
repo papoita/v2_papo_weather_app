@@ -1,4 +1,11 @@
 # v2_papos_weather_app
+
+weather forecast week8, )ct 18, 20211 deadline
+
+add html and css for forecast
+use another api for prediction
+replace for real data
+
  functional weather and location data searches
  
  #solution homework week 7, Oct 11 deadline
