@@ -117,5 +117,17 @@ h3:first-letter {
 .weather-forecast {
 	margin-top: 20px;
 	text-align: center;
+	color: black;
+}
+.weather-forecast-date {
+	font-size: 16px;
+	opacity: 0.6;
+}
+
+.weather-forecast-temp-min {
+	opacity: 0.5;
+}
+.weather-forecast-temp {
+	font-size: 13px;
 }
 /** @format */
