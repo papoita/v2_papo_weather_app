@@ -113,4 +113,9 @@ h3:first-letter {
 
 	border-radius: 10px;
 }
+
+.weather-forecast {
+	margin-top: 20px;
+	text-align: center;
+}
 /** @format */
