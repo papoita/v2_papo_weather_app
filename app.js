@@ -50,6 +50,25 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes} <br/> ${dates} ${month}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  //forecastElement.innerHTML = "forecast";
+  forecastElement.innerHTML = `<div class="row">
+    <div class="col-2">
+      <div class="weather-forecast-date">Mon</div>
+
+      <img
+        src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+        alt=""
+        width="42"
+      />
+      <div class="weather-forecast-temp">
+        <span class="weather-forecast-temp-max">18</span>
+        <span class="weather-forecast-temp-min">12</span>
+      </div>
+    </div>
+  </div> `;
+}
 
 //for weather conditions
 function showTemp(response) {
@@ -160,3 +179,4 @@ searchForm.addEventListener("submit", handleSubmit);
 
 
 search("Ottawa");
+displayForecast();
