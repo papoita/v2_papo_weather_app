@@ -51,15 +51,15 @@ function formatDate(timestamp) {
 }
 
 function displayForecast(response) {
-  // console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  //forecastElement.innerHTML = "forecast";
+
   let forecastHTML = `<div class="row">`;
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
+
+  days.forEach(function (forecastDay) {
     forecastHTML = forecastHTML + `
     <div class="col-2">
-      <div class="weather-forecast-date">${day}</div>
+      <div class="weather-forecast-date">${forecastDay.dt}</div>
 
       <img
         src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
