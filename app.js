@@ -66,7 +66,8 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
 
   forecast.forEach(function (forecastDay, index) {
-    forecastHTML = forecastHTML + `
+    if (index < 5) {
+      forecastHTML = forecastHTML + `
     <div class="col-2">
       <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
 ${index}
@@ -80,6 +81,7 @@ ${index}
         <span class="weather-forecast-temp-min">${Math.round(forecastDay.temp.min)} °</span>
     </div>
   </div> `;
+    }
   });
 
 
@@ -87,6 +89,9 @@ ${index}
 
   forecastElement.innerHTML = forecastHTML;
 }
+
+
+
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "888e4fcf51eb407327068f47d5808891";
