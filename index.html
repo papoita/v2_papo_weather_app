@@ -22,7 +22,7 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-		<title>paposweather_app2</title>
+		<title>paposweather_app2_celsius</title>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 
@@ -64,23 +64,18 @@
 						</div>
 					</form>
 					<h2 class="hard-text text-center city" id="city">Ottawa</h2>
-					<h3 class="hard-text text-center date" id="date">Date</h3>
 
 					<div class="row">
 						<div class="weather-temperature">
 							<div class="col-5 text-center">
 								<div class="float-left">
+									<h3 class="hard-text text-center date" id="date">Date</h3>
 									<strong id="temp"></strong
 									><span class="units"
-										><a href="index.html" id="celsius-link" class="active"> °C</a>
-										|
-										<a href="fahrenheit.html" id="fahrenheit-link">°F</a></span
-									>
+										><a href="#" id="celsius-link" class="active"> °C</a>
+									</span>
+									<img src="" alt="" id="icon" class="float-left" />
 								</div>
-							</div>
-
-							<div class="col-4">
-								<img src="" alt="" id="icon" class="float-right" />
 							</div>
 
 							<div class="col-3 align-left text-center">
