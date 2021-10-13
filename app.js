@@ -47,7 +47,7 @@ function formatDate(timestamp) {
   ];
   let month = months[date.getMonth()];
   let dates = date.getDate();
-  return `${day} ${hours}:${minutes} <br/> ${dates} ${month}`;
+  return `${dates} ${month}  <br/>  ${day} ${hours}:${minutes}`;
 }
 
 function formatDay(timestamp) {
@@ -68,7 +68,7 @@ function displayForecast(response) {
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML = forecastHTML + `
-    <div class="col-2 border forecast-day">
+    <div class="col-4 border forecast-day">
       <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
 
       <img
@@ -99,6 +99,8 @@ function getForecast(coordinates) {
   console.log(apiURL);
   axios.get(apiURL).then(displayForecast);
 }
+
+
 
 //for weather conditions
 function showTemp(response) {
@@ -178,16 +180,21 @@ button.addEventListener("click", showLocation);
 
 
 
+
+/*
+
 function showFahrenheitTemperature(event) {
   event.preventDefault();
   //alert("clicked");
   let temperatureElement = document.querySelector("#temp");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
+  //celsiusLink.classList.remove("active");
+  //fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * 9 / 5) + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
 
+
+}
+ 
 function showCelsiusTemperature(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
@@ -198,11 +205,16 @@ function showCelsiusTemperature(event) {
 
 let celsiusTemperature = null;
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+*/
+
+
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
