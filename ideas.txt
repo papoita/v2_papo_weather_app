@@ -1,4 +1,7 @@
 In order to de=fifrentiate from other weather apps:
 -include leaflet library and open street maps
+  -need an api key
+    register
+    figure out how to deply the app without revealing the api key
 -use lat lon from city search to display the area being searched
 -overlay weather icon corrsponding to current temp on top of the map
