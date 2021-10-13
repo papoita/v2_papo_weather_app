@@ -32,7 +32,7 @@ h2 {
 }
 
 .date {
-	font-size: 13px;
+	font-size: 16px;
 
 	color: black;
 }
@@ -104,7 +104,7 @@ h3:first-letter {
 }
 .weather-app-wrapper {
 	margin: 20px auto;
-	max-width: 800px;
+	max-width: 600px;
 }
 
 .weather-app {
@@ -131,9 +131,8 @@ h3:first-letter {
 	font-size: 13px;
 }
 
-.forecast-day:hover{
-	background-color: rgb(164, 161, 161);
+.forecast-day:hover {
+	background-color: rgb(172, 165, 165);
 	color: white;
-
 }
 /** @format */
