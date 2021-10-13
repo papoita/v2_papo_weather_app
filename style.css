@@ -130,4 +130,10 @@ h3:first-letter {
 .weather-forecast-temp {
 	font-size: 13px;
 }
+
+.forecast-day:hover{
+	background-color: rgb(164, 161, 161);
+	color: white;
+
+}
 /** @format */
