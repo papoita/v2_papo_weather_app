@@ -104,7 +104,7 @@ h3:first-letter {
 }
 .weather-app-wrapper {
 	margin: 20px auto;
-	max-width: 600px;
+	max-width: 700px;
 }
 
 .weather-app {
@@ -134,5 +134,9 @@ h3:first-letter {
 .forecast-day:hover {
 	background-color: rgb(172, 165, 165);
 	color: white;
+}
+#mapid {
+	height: 180px;
+	width: 400px;
 }
 /** @format */
