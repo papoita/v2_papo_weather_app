@@ -94,8 +94,8 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
   console.log(coordinates);
-  let apiKey = `${WEATHER_API_KEY}`;
-  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  //let WEATHER_API_KEY = "";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${WEATHER_API_KEY}&units=metric`;
   console.log(apiURL);
   axios.get(apiURL).then(displayForecast);
 }
@@ -123,9 +123,9 @@ function showTemp(response) {
 
 
 function search(city) {
-  let apiKey = `${WEATHER_API_KEY}`;
+  //let apiKey = `${WEATHER_API_KEY}`;
   let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}&units=${units}`;
   console.log(apiUrl);
   //to check if axios is working you can console.log it
   console.log(axios);
@@ -154,11 +154,11 @@ function showPosition(position) {
   //replace apiKey with secret personal key before loading
   //https://home.openweathermap.org/api_keys
   let units = "metric";
-  let apiKey = `${WEATHER_API_KEY}`;
+  //let apiKey = `${WEATHER_API_KEY}`;
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}`;
 
-  axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
+  axios.get(`${apiUrl}&appid=${WEATHER_API_KEY}`).then(showTemp);
 }
 
 
